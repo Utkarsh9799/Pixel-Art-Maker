@@ -1,2 +1,2 @@
 # Pixel-Art-Maker
-Pixel art on a customisable canvas
+A single-page web app that allows users to draw pixel art on a customizable canvas!
