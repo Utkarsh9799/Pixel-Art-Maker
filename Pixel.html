@@ -9,13 +9,15 @@
 	<h1>Pixel Art Maker</h1>
 	<h2>Choose Grid Size</h2>
 	<form>
-		Grid Height: <input type="number" name="Height" min="1" value="1">
-		Grid Widht: <input type="number" name="Widht" min="1" value="1">
-		<input type="submit" name="submit">
+		Grid Height: <input id="row" type="number" name="Height" min="1" max="100" value="10">
+		Grid Widht: <input id="column" type="number" name="Widht" min="1" max="100" value="10">
+		<input id="size" type="submit" name="submit">
 	</form>
 	<h2>Pick A Colour</h2>
 	<input type="color" name="Pick">
 	<h2>Design Canvas</h2>
-
+	<table id="canvas"></table>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="Design.js"></script>
 </body>
 </html>
