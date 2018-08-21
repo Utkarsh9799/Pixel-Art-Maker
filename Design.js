@@ -1,5 +1,5 @@
 // Select color input
-
+var col = $('#color').val();
 
 // Selecting size input
 $('#size').on('click', function(){
@@ -14,7 +14,14 @@ function makeGrid(r,c) {
 		$('#canvas').append("<tr></tr>");
 		for(var j = 0; j < c ; j++){
 			$('tr:last').append("<td></td>");
+			$('td').attr('class', 'cells');
 		}
 		event.preventDefault();
 	}
 }
+
+$('body').on('click', 'td', function (){
+	var col = $('#colourPicker').val();
+	$(this).css('background-color', col);
+
+});
