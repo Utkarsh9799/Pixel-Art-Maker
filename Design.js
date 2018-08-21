@@ -3,6 +3,7 @@
 
 // Selecting size input
 $('#size').on('click', function(){
+	$('tr').remove();
 	var row = $('#row').val();
 	var column =$('#column').val();
 	makeGrid(row,column);
