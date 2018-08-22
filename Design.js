@@ -22,6 +22,9 @@ function makeGrid(r,c) {
 
 $('body').on('click', 'td', function (){
 	var col = $('#colourPicker').val();
-	$(this).css('background-color', col);
+	if($(this).attr('style'))
+		$(this).removeAttr('style');
+	else
+		$(this).css('background-color', col);
 
 });
