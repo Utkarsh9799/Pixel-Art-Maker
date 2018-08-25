@@ -1,11 +1,12 @@
-// Select color input
+//Selecting colour, number of rows and columns input
 var col = $('#color').val();
 
-// Selecting size input
+//Making the grid
 $('#size').on('click', function(){
-	$('tr').remove();
 	var row = $('#row').val();
 	var column =$('#column').val();
+	$('tr').remove();
+	$('button').remove();
 	makeGrid(row,column);
 });
 
@@ -14,12 +15,14 @@ function makeGrid(r,c) {
 		$('#canvas').append("<tr></tr>");
 		for(var j = 0; j < c ; j++){
 			$('tr:last').append("<td></td>");
-			$('td').attr('class', 'cells');
 		}
 		event.preventDefault();
 	}
+	$('body').append("<button>Reset</button>");
+	$('button').attr('id', 'reset');
 }
 
+//Filling the cells with the colour
 $('body').on('click', 'td', function (){
 	var col = $('#colourPicker').val();
 	if($(this).attr('style'))
@@ -27,4 +30,9 @@ $('body').on('click', 'td', function (){
 	else
 		$(this).css('background-color', col);
 
+});
+
+//Reset button
+$('body').on('click', '#reset', function(){
+	$('td').removeAttr('style');
 });
