@@ -4,12 +4,12 @@ body{
 
 h1 {
     font-family: Monoton;
-    font-size: 70px;
-    margin: 12px;
+    font-size: 71px;
+    margin: 13px;
 }
 
 h2{
-	margin: 24px 0 6px;
+	margin: 25px 0 6px;
 }
 
 table,
@@ -24,11 +24,11 @@ table {
 }
 
 tr {
-    height: 20px;
+    height: 21px;
 }
 
 td {
-    width: 20px;
+    width: 21px;
 }
 
 input[type=number] {
